@@ -1,0 +1,4 @@
+TODOs
+0. Look at how to upload files to S3 more easily than via the buxket upload dialog
+1. Add cache-control” → max-age (https://www.quora.com/Built-a-static-website-and-hosted-it-on-Amazon-S3-its-very-slow-How-do-I-make-it-faster)
+2. Store questions in a separate (json?) file
