@@ -86,28 +86,12 @@ var myQuiz = [
     ["You have some batch processes which have flexible run times, can handle interruption, and for which you would like to minimize costs. What is the most appropriate EC2 instance type to use?", 2, "Reserved", "Spot", "On Demand", "Dedicated"],
     ["Which of the following is NOT a valid EC2 Instance Type?", 4, "F", "I", "G", "A"]
 ];
-fetch('./questions_and_answers.txt')
-    .then(
-        function(response) {
-            if (response.status !== 200) {
-                console.log('Looks like there was a problem. Status Code: ' +
-                    response.status);
-                return;
-            }
 
-            // Examine the text in the response
-            response.json().then(function(data) {
-                console.log(data);
-            });
-        }
-    )
-    .catch(function(err) {
-        console.log('Fetch Error :-S', err);
-    });
-
-//alert(myQuiz);
-//myQuiz = readTextFile("questions_and_answers.txt");
-//alert(myQuiz);
+alert(myQuiz);
+myQuiz = readTextFile("questions_and_answers.txt");
+alert(myQuiz);
+myQuiz = JSON.parse(myQuiz);
+alert(myQuiz);
 
 var myHeader = document.getElementById("quizHeader");
 var classname = document.getElementsByClassName("answer");
@@ -244,9 +228,9 @@ function readTextFile(file)
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
-                alert(rawFile.responseText);
+                //alert(rawFile.responseText);
                 allText = rawFile.responseText;
-                alert(allText);
+                //alert(allText);
             }
         }
     }
