@@ -1,5 +1,9 @@
 TODOs
+* Setup multiple quizes?
+* makes prettier using bootstrap standard template?
+* Add cache-control” → max-age (https://www.quora.com/Built-a-static-website-and-hosted-it-on-Amazon-S3-its-very-slow-How-do-I-make-it-faster)
+
+Done
 * Look at how to upload files to S3 more easily than via the bucket upload dialog
 * Store questions in a separate (json?) file
-* Add cache-control” → max-age (https://www.quora.com/Built-a-static-website-and-hosted-it-on-Amazon-S3-its-very-slow-How-do-I-make-it-faster)
 
