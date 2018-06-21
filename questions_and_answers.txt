@@ -1,0 +1,5 @@
+
+  ["What is the most appropriate routing policy to use in Route53 for A/B testing?", 4, "Simple routing policy", "Failover routing policy", "Latency routing policy", "Weighted routing policy"],
+  ["You have some batch processes which have flexible run times, can handle interruption, and for which you would like to minimize costs. What is the most appropriate EC2 instance type to use?", 2, "Reserved", "Spot", "On Demand", "Dedicated"],
+  ["Which of the following is NOT a valid EC2 Instance Type?", 4, "F", "I", "G", "A"]
+
