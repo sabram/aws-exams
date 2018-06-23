@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Quiz</title>
+<title>Quiz1</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 <style>
 .col-sm-6 {
@@ -75,13 +75,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">About</a>
+                    <a href="#" id="About">About</a>
                 </li>
                 <li>
-                    <a href="#">Services</a>
+                    <a href="#" id="1" data-page="1">Services</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#" id="2" data-page="2">Contact</a>
                 </li>
             </ul>
         </div>
@@ -90,7 +90,7 @@
     <!-- /.container -->
 </nav>
 
-<div class="container">
+<div class="container" id="mainbit">
   <h1>AWS Certified Solutions Architect - Associate: Practice Quiz</h1>
   <div id="quizContent" class="row quiz">
     <div class="col-sm-12">
@@ -116,5 +116,39 @@
   </div>  </div>
 </div>
 <script type="text/javascript" src="js/quiz.js"></script>
+<script type="text/javascript" src="vendor/jquery/jquery.js" language="JavaScript"></script>
+
+<script>
+//    $(document).ready(function() {
+//        $(".container").load("index.html");
+//    });
+
+    $("ul.navbar-nav li").each(function() {
+        $(this).on("click", function(e) {
+//            var text = $(this).text();
+//            alert(text);
+//
+//            alert(e.target.id);
+//
+//            var datapageattr = e.target.attr("data-page");
+//            alert(datapageattr);
+            var id = e.target.id
+//            alert("locading " + id+".html for " + $("#mainbit").id);
+            $("#mainbit").load(id+".html");
+        });
+    });
+
+
+//    function click(e){
+//        if(e.target.id=="About"){
+//            document.getElementsByClassName('container')[1].innerHTML="this is About";
+//        }
+//        if(e.target.id=="Library"){
+//            document.getElementsByClassName('container')[0].innerHTML="this is library";
+//        }
+//    }
+//    document.getElementById("About").addEventListener("click",click,false)
+//    document.getElementById("Library").addEventListener("click",click,false);
+</script>
 </body>
 </html>
